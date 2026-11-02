@@ -95,7 +95,7 @@ automatically. **Release:** v0.1.0.
 - [x] **M0.2** Shared ruff (lint and format) and `mypy --strict` configuration; both as pre-commit hooks — *3 h*
 - [x] **M0.3** pytest setup: markers (`unit`, `integration`, `e2e`, `slow`), branch coverage with a 90 % gate for core packages, Hypothesis profiles for dev and CI — *3 h*
 - [x] **M0.4** `justfile` with `bootstrap`, `lint`, `typecheck`, `test`, `docs`, `up`, `down` — *2 h*
-- [ ] **M0.5** GitHub Actions CI: pre-commit, lint, types, tests on Python 3.13 (3.14 allowed to fail until dependencies support it), uv cache, concurrency groups, per-job least-privilege `permissions`, actions pinned by commit SHA — *6 h*
+- [x] **M0.5** GitHub Actions CI: pre-commit, lint, types, tests on Python 3.13 (3.14 allowed to fail until dependencies support it), uv cache, concurrency groups, per-job least-privilege `permissions`, actions pinned by commit SHA — *6 h*
 - [ ] **M0.6** Conventional Commits check on pull-request titles, release-please configuration, first tagged release v0.1.0 with a generated changelog — *3 h*
 - [ ] **M0.7** Dependabot for uv, GitHub Actions and Docker, with grouped updates — *2 h*
 - [ ] **M0.8** Community files: CONTRIBUTING, CODE_OF_CONDUCT (Contributor Covenant), SECURITY.md, issue forms (bug, feature, new data source), pull-request template, CODEOWNERS, labels — *4 h*

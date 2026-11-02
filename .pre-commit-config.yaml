@@ -1,8 +1,8 @@
 # Run `pre-commit install` once after cloning. Hooks run on every commit;
 # CI runs the same hooks with `pre-commit run --all-files`.
 # Python tools run from the locked uv environment, so pre-commit, CI and editors
-# all use the exact versions in uv.lock. More hooks (sqlfluff, hadolint,
-# actionlint) arrive with the code they check.
+# all use the exact versions in uv.lock. More hooks (sqlfluff, hadolint)
+# arrive with the code they check.
 repos:
   - repo: https://github.com/gitleaks/gitleaks
     rev: v8.30.1
@@ -24,6 +24,11 @@ repos:
         args: [--fix=lf]
       - id: trailing-whitespace
         args: [--markdown-linebreak-ext=md]
+
+  - repo: https://github.com/rhysd/actionlint
+    rev: v1.7.12
+    hooks:
+      - id: actionlint
 
   - repo: local
     hooks:

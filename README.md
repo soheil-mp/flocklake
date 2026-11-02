@@ -1,5 +1,8 @@
 # FlockLake
 
+[![CI](https://github.com/soheil-mp/flocklake/actions/workflows/ci.yml/badge.svg)](https://github.com/soheil-mp/flocklake/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 **Bird migration, measured by weather radar.** FlockLake is an open data platform that turns
 public weather-radar data from Europe and the US into quality-checked, lineage-tracked data
 products about migrating birds: how many fly each night, at what altitude, in which direction,
