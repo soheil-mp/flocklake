@@ -505,7 +505,15 @@ SBOM and DOI are linked from the release page.
 
 ## Tracking
 
-Each item becomes one GitHub issue titled with its ID (for example `M3.4 Budget planner v1`), in a
-GitHub milestone per roadmap milestone, labelled by area (`area:ingest`, `area:science`,
-`area:platform`, `area:web`, `area:docs`) and size. This file stays the overview and is updated in
-the same pull request that closes an item.
+Every item is a GitHub issue titled with its ID (for example `M3.4 Budget planner v1`), in a
+GitHub milestone per roadmap milestone:
+[milestones](https://github.com/soheil-mp/flocklake/milestones) ·
+[open roadmap issues](https://github.com/soheil-mp/flocklake/issues?q=is%3Aissue+is%3Aopen+label%3Aroadmap).
+
+- Labels: `roadmap`; an area (`area:devex`, `area:science`, `area:platform`, `area:ingest`,
+  `area:orchestration`, `area:transform`, `area:quality`, `area:ops`, `area:web`, `area:api`,
+  `area:docs`, `area:stretch`); and a size (`size:S` up to 2 h, `size:M` 3–5 h, `size:L` 6–8 h,
+  `size:XL` 10 h or more).
+- A pull request that finishes an item closes its issue (`Closes #N`) and ticks the item here.
+- New work found along the way gets an issue first, then a line here if it changes a milestone's
+  scope or estimate.
