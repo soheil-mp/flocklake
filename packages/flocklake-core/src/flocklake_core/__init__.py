@@ -1,0 +1,7 @@
+"""Radar aeroecology physics and data formats for FlockLake."""
+
+from importlib.metadata import version
+
+__all__ = ["__version__"]
+
+__version__: str = version("flocklake-core")

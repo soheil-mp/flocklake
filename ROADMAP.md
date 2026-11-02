@@ -91,7 +91,7 @@ flowchart LR
 **Goal:** a repository where every later change is linted, typed, tested, documented and released
 automatically. **Release:** v0.1.0.
 
-- [ ] **M0.1** uv workspace root and a `flocklake-core` package skeleton (`src/` layout, `py.typed`, Python 3.13 pinned) — *4 h*
+- [x] **M0.1** uv workspace root and a `flocklake-core` package skeleton (`src/` layout, `py.typed`, Python 3.13 pinned) — *4 h*
 - [ ] **M0.2** Shared ruff (lint and format) and `mypy --strict` configuration; both as pre-commit hooks — *3 h*
 - [ ] **M0.3** pytest setup: markers (`unit`, `integration`, `e2e`, `slow`), branch coverage with a 90 % gate for core packages, Hypothesis profiles for dev and CI — *3 h*
 - [ ] **M0.4** `justfile` with `bootstrap`, `lint`, `typecheck`, `test`, `docs`, `up`, `down` — *2 h*

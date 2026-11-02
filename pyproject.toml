@@ -1,0 +1,22 @@
+# Workspace root. Not a package itself: it holds the shared developer tooling and
+# the configuration every member package inherits.
+[project]
+name = "flocklake-workspace"
+version = "0.0.0"
+description = "Workspace root for the FlockLake packages"
+requires-python = ">=3.13"
+license = "MIT"
+
+[tool.uv]
+package = false
+
+[tool.uv.workspace]
+members = ["packages/*"]
+
+[tool.uv.sources]
+flocklake-core = { workspace = true }
+
+[dependency-groups]
+dev = [
+    "flocklake-core",
+]
