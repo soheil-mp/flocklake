@@ -19,4 +19,58 @@ flocklake-core = { workspace = true }
 [dependency-groups]
 dev = [
     "flocklake-core",
+    "mypy>=2.4.1",
+    "ruff>=0.17.3",
 ]
+
+# --- Lint and format ----------------------------------------------------------
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+src = ["packages/*/src", "packages/*/tests"]
+
+[tool.ruff.lint]
+# Start from everything and switch off only what conflicts or does not fit.
+select = ["ALL"]
+ignore = [
+    "COM812",  # trailing commas are the formatter's job
+    "ISC001",  # conflicts with the formatter
+    "CPY001",  # no copyright header per file; the LICENSE covers it
+    "TD002",   # TODOs do not need an author
+    "TD003",   # TODOs link to issues where useful, not always
+    "FIX002",  # TODOs are allowed; they are tracked as issues
+]
+
+[tool.ruff.lint.per-file-ignores]
+"**/tests/**" = [
+    "S101",     # assert is how pytest tests
+    "PLR2004",  # literal expected values are clearer in tests
+    "D100",     # test modules do not need module docstrings
+    "D104",
+    "INP001",   # test directories are not packages
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
+
+[tool.ruff.lint.flake8-tidy-imports]
+ban-relative-imports = "all"
+
+[tool.ruff.format]
+docstring-code-format = true
+
+# --- Types --------------------------------------------------------------------
+[tool.mypy]
+python_version = "3.13"
+strict = true
+warn_unreachable = true
+enable_error_code = [
+    "ignore-without-code",
+    "redundant-expr",
+    "truthy-bool",
+    "possibly-undefined",
+    "redundant-self",
+]
+files = ["packages/flocklake-core/src"]
+mypy_path = "packages/flocklake-core/src"
+explicit_package_bases = true
