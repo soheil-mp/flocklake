@@ -19,7 +19,10 @@ flocklake-core = { workspace = true }
 [dependency-groups]
 dev = [
     "flocklake-core",
+    "hypothesis>=6.170.14",
     "mypy>=2.4.1",
+    "pytest>=9.2.0",
+    "pytest-cov>=7.1.0",
     "ruff>=0.17.3",
 ]
 
@@ -46,9 +49,11 @@ ignore = [
     "S101",     # assert is how pytest tests
     "PLR2004",  # literal expected values are clearer in tests
     "D100",     # test modules do not need module docstrings
+    "D103",     # test names describe the behaviour under test
     "D104",
     "INP001",   # test directories are not packages
 ]
+"conftest.py" = ["INP001"]
 
 [tool.ruff.lint.pydocstyle]
 convention = "numpy"
@@ -71,6 +76,34 @@ enable_error_code = [
     "possibly-undefined",
     "redundant-self",
 ]
-files = ["packages/flocklake-core/src"]
+files = ["conftest.py", "packages/flocklake-core/src", "packages/flocklake-core/tests"]
 mypy_path = "packages/flocklake-core/src"
 explicit_package_bases = true
+
+# --- Tests --------------------------------------------------------------------
+[tool.pytest.ini_options]
+minversion = "9.0"
+testpaths = ["packages"]
+addopts = ["--strict-markers", "--strict-config", "--import-mode=importlib", "-ra"]
+xfail_strict = true
+filterwarnings = ["error"]
+markers = [
+    "unit: fast, isolated tests with no services (the default kind)",
+    "integration: needs services such as PostgreSQL or the object store",
+    "e2e: runs data end to end through the platform",
+    "slow: takes more than a few seconds",
+]
+
+[tool.coverage.run]
+branch = true
+source_pkgs = ["flocklake_core"]
+
+[tool.coverage.report]
+fail_under = 90
+show_missing = true
+skip_covered = true
+exclude_also = [
+    "if TYPE_CHECKING:",
+    "@overload",
+    "raise NotImplementedError",
+]
