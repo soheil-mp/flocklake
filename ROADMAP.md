@@ -97,7 +97,7 @@ automatically. **Release:** v0.1.0.
 - [x] **M0.4** `justfile` with `bootstrap`, `lint`, `typecheck`, `test`, `docs`, `up`, `down` — *2 h*
 - [x] **M0.5** GitHub Actions CI: pre-commit, lint, types, tests on Python 3.13 (3.14 allowed to fail until dependencies support it), uv cache, concurrency groups, per-job least-privilege `permissions`, actions pinned by commit SHA — *6 h*
 - [ ] **M0.6** Conventional Commits check on pull-request titles, release-please configuration, first tagged release v0.1.0 with a generated changelog — *3 h*
-- [ ] **M0.7** Dependabot for uv, GitHub Actions and Docker, with grouped updates — *2 h*
+- [x] **M0.7** Dependabot for uv and GitHub Actions, with grouped updates and a cooldown — *2 h*
 - [ ] **M0.8** Community files: CONTRIBUTING, CODE_OF_CONDUCT (Contributor Covenant), SECURITY.md, issue forms (bug, feature, new data source), pull-request template, CODEOWNERS, labels — *4 h*
 - [ ] **M0.9** `CITATION.cff` and a NOTICE file with data-source attributions — *2 h*
 - [ ] **M0.10** Dev container with uv, just, DuckDB CLI and pre-commit — *3 h*
@@ -139,7 +139,7 @@ synthetic generator writes files that xradar opens without warnings.
 - [ ] **M2.1** Docker Compose: PostgreSQL (lake catalog and Dagster storage), SeaweedFS (S3), bucket bootstrap job; healthchecks, named volumes, profiles (`core`, `obs`, `lineage`, `api`) — *6 h*
 - [ ] **M2.2** DuckLake catalog on PostgreSQL with data on S3; schemas `bronze`, `silver`, `gold`; connection helper reading credentials from the environment — *4 h*
 - [ ] **M2.3** One settings model (pydantic-settings) for all packages; a test fails if `.env.example` and the settings drift apart — *3 h*
-- [ ] **M2.4** Multi-stage Dockerfile for Python services: uv build stage, slim runtime, non-root user, base image pinned by digest, OCI labels, healthcheck, read-only root filesystem; hadolint in pre-commit — *5 h*
+- [ ] **M2.4** Multi-stage Dockerfile for Python services: uv build stage, slim runtime, non-root user, base image pinned by digest, OCI labels, healthcheck, read-only root filesystem; hadolint in pre-commit; Docker updates in Dependabot — *5 h*
 - [ ] **M2.5** Storage accounting per layer (object store and catalog) and a `flocklake budget` report — *4 h*
 - [ ] **M2.6** Lake maintenance job: merge small files, expire snapshots, remove orphaned files, apply retention per layer — *4 h*
 - [ ] **M2.7** Integration-test harness with testcontainers (PostgreSQL and SeaweedFS), session-scoped — *5 h*
