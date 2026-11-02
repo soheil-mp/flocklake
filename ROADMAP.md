@@ -98,7 +98,7 @@ automatically. **Release:** v0.1.0.
 - [x] **M0.5** GitHub Actions CI: pre-commit, lint, types, tests on Python 3.13 (3.14 allowed to fail until dependencies support it), uv cache, concurrency groups, per-job least-privilege `permissions`, actions pinned by commit SHA — *6 h*
 - [ ] **M0.6** Conventional Commits check on pull-request titles, release-please configuration, first tagged release v0.1.0 with a generated changelog — *3 h*
 - [x] **M0.7** Dependabot for uv and GitHub Actions, with grouped updates and a cooldown — *2 h*
-- [ ] **M0.8** Community files: CONTRIBUTING, CODE_OF_CONDUCT (Contributor Covenant), SECURITY.md, issue forms (bug, feature, new data source), pull-request template, CODEOWNERS, labels — *4 h*
+- [x] **M0.8** Community files: CONTRIBUTING, CODE_OF_CONDUCT (Contributor Covenant), SECURITY.md, issue forms (bug, feature, new data source), pull-request template, CODEOWNERS, labels — *4 h*
 - [ ] **M0.9** `CITATION.cff` and a NOTICE file with data-source attributions — *2 h*
 - [ ] **M0.10** Dev container with uv, just, DuckDB CLI and pre-commit — *3 h*
 - [ ] **M0.11** Documentation site with Zensical (research notes, architecture, ADRs), built in CI and deployed to GitHub Pages — *4 h*

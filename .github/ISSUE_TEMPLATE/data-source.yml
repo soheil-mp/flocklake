@@ -1,0 +1,54 @@
+name: New data source
+description: Propose a radar network, product or context dataset to ingest.
+labels: [enhancement, area:ingest]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        FlockLake ingests only open data that is not about people. Please fill in the access and licence details; they decide whether a source can be used.
+  - type: input
+    id: name
+    attributes:
+      label: Source name
+      placeholder: e.g. DWD radar volumes
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Documentation URL
+    validations:
+      required: true
+  - type: textarea
+    id: content
+    attributes:
+      label: What it contains
+      description: Radars or area covered, quantities, time span, cadence.
+    validations:
+      required: true
+  - type: textarea
+    id: access
+    attributes:
+      label: Access
+      description: Bucket or API endpoint, authentication, rate limits, file format and key layout.
+    validations:
+      required: true
+  - type: input
+    id: licence
+    attributes:
+      label: Licence
+      placeholder: e.g. CC BY 4.0
+    validations:
+      required: true
+  - type: input
+    id: size
+    attributes:
+      label: Approximate size per radar per day
+      description: Needed to plan within the storage budget.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: The data is openly licensed and contains no personal data.
+          required: true

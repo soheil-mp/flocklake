@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a security vulnerability
+    url: https://github.com/soheil-mp/flocklake/security/advisories/new
+    about: Please report security problems privately, not as public issues.
+  - name: Read the roadmap
+    url: https://github.com/soheil-mp/flocklake/blob/main/ROADMAP.md
+    about: Planned work is already tracked as issues titled with a roadmap ID.

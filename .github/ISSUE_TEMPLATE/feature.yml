@@ -1,0 +1,36 @@
+name: Feature or improvement
+description: Suggest new behaviour or a change to existing behaviour.
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What are you trying to do, and what gets in the way today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: What should change? Include formulas and references for scientific changes.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: input
+    id: roadmap
+    attributes:
+      label: Related roadmap item
+      placeholder: e.g. M14.4
+  - type: checkboxes
+    id: principles
+    attributes:
+      label: Project principles
+      options:
+        - label: The change uses only open data that is not about people.
+          required: true
+        - label: The change keeps processing physics-based or rule-based (no learned models).
+          required: true
