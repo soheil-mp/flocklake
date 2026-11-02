@@ -85,16 +85,19 @@ migrants. (Output from 2 November 2026; values can change if the upstream data i
 
 ### Develop
 
+Prerequisites: [uv](https://docs.astral.sh/uv/) and [just](https://just.systems/)
+(`uv tool install rust-just` works). uv installs Python 3.13 itself if needed.
+
 ```sh
 git clone https://github.com/soheil-mp/flocklake.git
 cd flocklake
-pre-commit install          # secret scanning and file checks before every commit
-cp .env.example .env        # placeholders only; public sources need no keys
+just bootstrap              # packages and dev tools from uv.lock, plus the git hooks
+just check                  # what CI runs: lint, format, strict types, secret scan, tests
+just                        # list every recipe
 ```
 
-The local platform (`just up`, `just demo`) arrives with milestones M0–M4 of the roadmap.
-Prerequisites will be Docker with Compose, [uv](https://docs.astral.sh/uv/) and
-[just](https://just.systems/).
+The local data platform (`just up`) arrives with roadmap milestone M2 and will also need Docker
+with Compose.
 
 ## Status and plans
 
