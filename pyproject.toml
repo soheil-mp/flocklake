@@ -86,7 +86,13 @@ explicit_package_bases = true
 [tool.pytest.ini_options]
 minversion = "9.0"
 testpaths = ["packages"]
-addopts = ["--strict-markers", "--strict-config", "--import-mode=importlib", "-ra"]
+addopts = [
+    "--strict-markers",
+    "--strict-config",
+    "--import-mode=importlib",
+    "--doctest-modules",
+    "-ra",
+]
 xfail_strict = true
 filterwarnings = ["error"]
 markers = [
