@@ -1,0 +1,81 @@
+cff-version: 1.2.0
+message: >-
+  If you use FlockLake, please cite it as below. Please also cite the data
+  sources you used (see docs/research/data-sources.md) and the methods listed
+  under references.
+type: software
+title: "FlockLake: an open radar-aeroecology data platform"
+abstract: >-
+  FlockLake turns public weather-radar data from Europe and the US into
+  quality-checked, lineage-tracked data products about migrating birds:
+  densities, flight altitudes, speeds and directions, and nightly migration
+  traffic, using transparent, physics-based methods.
+authors:
+  - family-names: Mohammadpour
+    given-names: Soheil
+repository-code: "https://github.com/soheil-mp/flocklake"
+license: MIT
+keywords:
+  - weather radar
+  - bird migration
+  - aeroecology
+  - vertical profiles
+  - data engineering
+  - open data
+references:
+  - type: article
+    title: "Bird migration flight altitudes studied by a network of operational weather radars"
+    authors:
+      - family-names: "Dokter"
+        given-names: "Adriaan M."
+      - family-names: "Liechti"
+        given-names: "Felix"
+      - family-names: "Stark"
+        given-names: "Herbert"
+      - family-names: "Delobbe"
+        given-names: "Laurent"
+      - family-names: "Tabary"
+        given-names: "Pierre"
+      - family-names: "Holleman"
+        given-names: "Iwan"
+    journal: "Journal of The Royal Society Interface"
+    volume: 8
+    issue: 54
+    start: 30
+    end: 43
+    year: 2011
+    doi: 10.1098/rsif.2010.0116
+  - type: article
+    title: "bioRad: biological analysis and visualization of weather radar data"
+    authors:
+      - family-names: "Dokter"
+        given-names: "Adriaan M."
+      - family-names: "Desmet"
+        given-names: "Peter"
+      - family-names: "Spaaks"
+        given-names: "Jurriaan H."
+      - family-names: "van Hoey"
+        given-names: "Stijn"
+      - family-names: "Veen"
+        given-names: "Lourens"
+      - family-names: "Verlinden"
+        given-names: "Liesbeth"
+      - family-names: "Nilsson"
+        given-names: "Cecilia"
+      - family-names: "Haase"
+        given-names: "Günther"
+      - family-names: "Leijnse"
+        given-names: "Hidde"
+      - family-names: "Farnsworth"
+        given-names: "Andrew"
+      - family-names: "Bouten"
+        given-names: "Willem"
+      - family-names: "Shamoun‐Baranes"
+        given-names: "Judy"
+    journal: "Ecography"
+    volume: 42
+    issue: 5
+    start: 852
+    end: 860
+    year: 2019
+    doi: 10.1111/ecog.04028
