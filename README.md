@@ -113,6 +113,12 @@ What exists today:
 - [Target architecture](docs/architecture.md) and [architecture decision records](docs/adr/).
 - [ROADMAP.md](ROADMAP.md): 6 phases, 22 milestones, 177 estimated items, from engineering
   foundations to v1.0.0.
+- Engineering foundations: uv workspace, strict typing, tests with a coverage gate, CI with a
+  full-history secret scan, Dependabot and community files.
+- [`flocklake-core`](packages/flocklake-core/README.md), the domain library: radar sites and
+  bands, reflectivity to bird density, vertical integration (VID, MTR, heights, migration
+  traffic) with written rules for missing data, altitude bands, circular statistics and the
+  night calendar.
 
 The work ahead is in [ROADMAP.md](ROADMAP.md) and the issues.
 
