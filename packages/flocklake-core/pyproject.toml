@@ -18,6 +18,7 @@ classifiers = [
     "Typing :: Typed",
 ]
 dependencies = [
+    "astral>=3.2",
     "numpy>=2.2",
 ]
 
