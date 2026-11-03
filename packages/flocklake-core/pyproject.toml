@@ -27,5 +27,5 @@ Homepage = "https://github.com/soheil-mp/flocklake"
 Issues = "https://github.com/soheil-mp/flocklake/issues"
 
 [build-system]
-requires = ["uv_build>=0.11,<0.12"]
+requires = ["uv_build>=0.11,<0.14"]
 build-backend = "uv_build"
