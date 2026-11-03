@@ -51,7 +51,9 @@ ignore = [
     "S101",     # assert is how pytest tests
     "PLR2004",  # literal expected values are clearer in tests
     "D100",     # test modules do not need module docstrings
-    "D103",     # test names describe the behaviour under test
+    "D101",     # test classes group tests; their names say what
+    "D102",     # test names describe the behaviour under test
+    "D103",
     "D104",
     "INP001",   # test directories are not packages
 ]

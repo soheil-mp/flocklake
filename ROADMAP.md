@@ -112,7 +112,7 @@ merged; v0.1.0 exists with a changelog; the documentation site is live.
 **Goal:** the radar physics and data formats as a small, dependency-light, fully tested library
 (`flocklake-core`). Everything later builds on it.
 
-- [ ] **M1.1** Typed domain model: radar site (ODIM node, WIGOS id, ICAO, coordinates, antenna height, wavelength, band), quantities, explicit units — *4 h*
+- [x] **M1.1** Typed domain model: radar site (ODIM node, WIGOS id, ICAO, coordinates, antenna height, wavelength, band), quantities, explicit units — *4 h*
 - [x] **M1.2** Reflectivity physics: dBZ ↔ Z ↔ η, η → density with configurable radar cross-section and \|K\|²; vectorised; reproduces the worked example in the science note within 0.2 % — *4 h*
 - [ ] **M1.3** Profile integration: VID, VIR, MTR, RTR, MT, density-weighted height and quantiles, direction-specific traffic; documented rules for gaps and missing values — *6 h*
 - [ ] **M1.4** Altitude-band overlap weighting for arbitrary bands over 200 m layers; property tests (full range equals total; weights within [0, 1]) — *3 h*
