@@ -114,6 +114,10 @@ With layer thickness Δh in km (0.2 km) and ff converted to km/h (× 3.6):
   layer counts with its overlap fraction. For 25–300 m, the 0–200 m layer counts 175/200 and the
   200–400 m layer counts 100/200. The lowest layers are the least reliable (ground clutter, beam
   blockage, beam height growing with range), so band products carry a quality flag.
+- **Gaps and missing values** (implemented in `flocklake_core.integrate`): gap-flagged layers and
+  layers without density are left out and lower a `coverage` share; empty layers have zero
+  traffic even without a speed; layers with birds but no speed are left out of MTR and RTR only;
+  in MT each profile's MTR lasts until the next profile, for at most one hour.
 
 ## 6. Time: nights, not calendar days
 
