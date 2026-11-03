@@ -116,7 +116,7 @@ merged; v0.1.0 exists with a changelog; the documentation site is live.
 - [x] **M1.2** Reflectivity physics: dBZ ↔ Z ↔ η, η → density with configurable radar cross-section and \|K\|²; vectorised; reproduces the worked example in the science note within 0.2 % — *4 h*
 - [ ] **M1.3** Profile integration: VID, VIR, MTR, RTR, MT, density-weighted height and quantiles, direction-specific traffic; documented rules for gaps and missing values — *6 h*
 - [ ] **M1.4** Altitude-band overlap weighting for arbitrary bands over 200 m layers; property tests (full range equals total; weights within [0, 1]) — *3 h*
-- [ ] **M1.5** Circular statistics (mean direction, resultant length, angular deviation) and wind "from" ↔ movement "to" conversions; tests across the 0°/360° wrap — *3 h*
+- [x] **M1.5** Circular statistics (mean direction, resultant length, angular deviation) and wind "from" ↔ movement "to" conversions; tests across the 0°/360° wrap — *3 h*
 - [ ] **M1.6** Night calendar: sunset, sunrise and civil twilight per radar (astral); night window per partition date; polar day and night; UTC internally — *5 h*
 - [ ] **M1.7** Radar registry: seed file for radars in scope (Aloft, OPERA, NEXRAD metadata) with schema validation and lookups by ODIM, WIGOS and ICAO ids — *4 h*
 - [ ] **M1.8** VPTS CSV reader and writer (Arrow/Polars), validated against the official Frictionless table schema (pinned by hash); round-trip tests — *5 h*
